@@ -5,14 +5,15 @@ const typeDefs = `
 
     type Mutation {
         login(email: String!, password: String!): Auth
-        addUser(name: String!, email: String!, password: String!): Auth
+        addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
         saveBook(data: ID): User 
         removeBook(bookId: ID!): User 
     }
 
     type User {
         id: ID
-        username: String
+        firstName: String
+        lastName: String
         email: String
         bookCount: Int
         savedBooks: [Book]
